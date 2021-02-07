@@ -81,10 +81,11 @@
 					</div>
 					<footer class="mx-sm-5 pl-sm-5 pb-5">
 						<div>
-							<a href="#">English</a> | <a href="#">隐私政策</a> | <a href="#">使用条款</a> | 
+							<a href="#">English</a> | <a href="#">隐私政策</a> | <a href="#">使用条款</a> |
 						</div>
 						<div>
-							<a href="#"><img src="images/icpicon.png" width="10" height="10" alt="">沪公网安备 31010402000318号</a> | <a href="#">沪ICP备17003747号</a>
+							<a href="#"><img src="images/icpicon.png" width="10" height="10" alt="">沪公网安备
+								31010402000318号</a> | <a href="#">沪ICP备17003747号</a>
 						</div>
 					</footer>
 				</div>
@@ -215,7 +216,7 @@
 						<h3 class="my-4 text-dark">1912 派克街 | 咖啡星讲堂</h3>
 						<p class="text-muted">了解更多星巴克咖啡文化</p>
 					</div>
-					
+
 					<!-- 滚动内容 -->
 					<div class="col-12">
 						<div class="scroll pl-3">
@@ -293,18 +294,15 @@
 		</ul>
 	</footer>
 
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-		crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-		crossorigin="anonymous"></script>
+	<script crossorigin="anonymous" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT"
+		src="https://lib.baomitu.com/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 	<script>
-		$('#showBtn').on('click',function(){
+		$('#showBtn').on('click', function () {
 			$('.menu').removeClass('hide').addClass('show');
 			shadowMenu();
 		});
-		$('#closeBtn').on('click',function(){
+		$('#closeBtn').on('click', function () {
 			$('.menu').removeClass('show').addClass('hide');
 			shadowMenu();
 		});
@@ -312,13 +310,13 @@
 		$(window).resize(shadowMenu);
 
 		//当菜单弹出的时候，不要让body出现滚动条。当菜单消失的时候再让body出现滚动条
-		function shadowMenu(){
+		function shadowMenu() {
 			//只有当屏幕尺寸小于992，以及menu菜单是显示的状态，这时才要干掉body的滚动条
-			if($(window).innerWidth()<=992 && $('.menu').hasClass('show')){
+			if ($(window).innerWidth() <= 992 && $('.menu').hasClass('show')) {
 				//console.log(1);
-				$('body').css('overflow','hidden');
-			}else{
-				$('body').css('overflow','auto');
+				$('body').css('overflow', 'hidden');
+			} else {
+				$('body').css('overflow', 'auto');
 			}
 		}
 	</script>
